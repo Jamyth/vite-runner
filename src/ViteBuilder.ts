@@ -1,5 +1,4 @@
 import yargs from 'yargs';
-import fs from 'fs';
 import { build } from 'vite';
 import { createViteConfig } from './ViteConfiguration';
 import type { UserConfig } from 'vite';
