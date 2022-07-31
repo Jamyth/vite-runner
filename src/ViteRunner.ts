@@ -17,12 +17,13 @@ export class ViteRunner {
 
         const proxy: Record<string, ProxyOptions> = {};
 
-        apiProxy.forEach(({ target, context }) => {
+        apiProxy.forEach(({ target, context, rewrite = (_) => _ }) => {
             const proxies = context.map(
-                (ctx): ProxyOptions => ({
+                (ctx): Record<string, ProxyOptions> => ({
                     [ctx]: {
                         target,
                         changeOrigin: true,
+                        rewrite,
                     },
                 }),
             );

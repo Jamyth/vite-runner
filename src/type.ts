@@ -26,4 +26,5 @@ export interface ViteBuilderOptions extends ViteConfigOptions {
 export type APIProxy = {
     target: string;
     context: string[];
+    rewrite?: (path: string) => string;
 };
