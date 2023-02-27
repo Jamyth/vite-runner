@@ -1,7 +1,7 @@
-import type { PluginOption } from 'vite';
+import type { PluginOption } from "vite";
 
 export interface ViteConfigOptions {
-    projectDirectory: string;
+    rootDirectory: string;
     tsconfigPath?: string;
     plugins?: (PluginOption | PluginOption[])[];
     pathResolver?: PathResolver[];
